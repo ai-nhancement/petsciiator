@@ -6,3 +6,6 @@
 /bin1/
 /res/example/
 /.idea/
+/build/
+/dist/app/
+/tools/

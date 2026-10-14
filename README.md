@@ -19,6 +19,16 @@ There are several output formats to choose from:
 <img src="https://github.com/EgonOlsen71/petsciiator/blob/master/examples/pet4032-12.jpg" width="320" height="200">  ==>  ![petscii image](https://github.com/EgonOlsen71/petsciiator/blob/master/examples/petscii/pet4032-12_petscii.png)
 
 
+# Desktop app
+
+Besides the command line version, there's a desktop app with a live preview. Load an image (Open, drag and drop or paste it with Ctrl+V), adjust the settings and watch the result change, then export into any of the formats listed above. The Koala and Hires buttons preview those conversions instead of PETSCII.
+
+To convert many images at once, click **Batch...** or drop several files or a whole folder onto the window. All images are converted with the current settings into the selected export formats.
+
+To build it on Windows, run **build_app.cmd**. It needs a JDK 17 or newer (it uses JAVA_HOME or the newest JDK in "C:\Program Files\Eclipse Adoptium"). The app ends up in **dist/app/PETSCIIator**, with its own Java runtime included, so that whole folder can be copied anywhere and started via PETSCIIator.exe.
+
+If the [WiX Toolset 3](https://github.com/wixtoolset/wix3/releases) binaries are in **tools/wix** (or on the PATH), the build also creates an installer in **dist/installer**. It installs for the current user only (no admin rights needed) and adds a Start menu entry and a desktop shortcut.
+
 Everything needed to start the converter can be found in the dist-directory. There, you'll find the JAR file and two batch files (one for Windows, one for Linux) to start the converter.
 When you start the converter using one of these batch files without specifying any addional options (but at least with a source file), it will take the source file (or, if it's a source directory, all fitting images in that directory) and convert them into PETSCII using the default settings. It will create one image and one basic output file for each source image (see above). You can change this behaviour by using...
 
